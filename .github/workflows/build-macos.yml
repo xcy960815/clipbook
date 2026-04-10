@@ -23,13 +23,13 @@ jobs:
         run: xcodebuild -version
 
       - name: Resolve Swift package dependencies
-        run: xcodebuild -resolvePackageDependencies -project Maccy.xcodeproj
+        run: xcodebuild -resolvePackageDependencies -project Clipbook.xcodeproj
 
       - name: Build unsigned app
         run: >
           xcodebuild
-          -project Maccy.xcodeproj
-          -scheme Maccy
+          -project Clipbook.xcodeproj
+          -scheme Clipbook
           -configuration Release
           -derivedDataPath build
           -destination 'platform=macOS'
@@ -39,23 +39,23 @@ jobs:
       - name: Package app artifact
         run: >
           ditto -c -k --sequesterRsrc --keepParent
-          build/Build/Products/Release/Maccy.app
-          Maccy-${{ github.ref_name }}-unsigned.app.zip
+          build/Build/Products/Release/Clipbook.app
+          Clipbook-${{ github.ref_name }}-unsigned.app.zip
 
       - name: Read build metadata
         id: metadata
         run: |
-          INFO_PLIST="build/Build/Products/Release/Maccy.app/Contents/Info.plist"
+          INFO_PLIST="build/Build/Products/Release/Clipbook.app/Contents/Info.plist"
           echo "short_version=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$INFO_PLIST")" >> "$GITHUB_OUTPUT"
           echo "build_version=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$INFO_PLIST")" >> "$GITHUB_OUTPUT"
           echo "minimum_system_version=$(/usr/libexec/PlistBuddy -c 'Print :LSMinimumSystemVersion' "$INFO_PLIST")" >> "$GITHUB_OUTPUT"
-          echo "asset_size=$(stat -f%z "Maccy-${{ github.ref_name }}-unsigned.app.zip")" >> "$GITHUB_OUTPUT"
+          echo "asset_size=$(stat -f%z "Clipbook-${{ github.ref_name }}-unsigned.app.zip")" >> "$GITHUB_OUTPUT"
 
       - name: Upload app artifact
         uses: actions/upload-artifact@v6
         with:
-          name: Maccy-${{ github.ref_name }}-unsigned-macos-app
-          path: Maccy-${{ github.ref_name }}-unsigned.app.zip
+          name: Clipbook-${{ github.ref_name }}-unsigned-macos-app
+          path: Clipbook-${{ github.ref_name }}-unsigned.app.zip
           retention-days: 7
 
       - name: Publish GitHub Release asset
@@ -63,7 +63,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TAG_NAME: ${{ github.ref_name }}
-          ASSET_NAME: Maccy-${{ github.ref_name }}-unsigned.app.zip
+          ASSET_NAME: Clipbook-${{ github.ref_name }}-unsigned.app.zip
         run: |
           if gh release view "$TAG_NAME" >/dev/null 2>&1; then
             gh release upload "$TAG_NAME" "$ASSET_NAME" --clobber
@@ -89,7 +89,7 @@ jobs:
           <?xml version="1.0" encoding="utf-8"?>
           <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
             <channel>
-              <title>Maccy</title>
+              <title>Clipbook</title>
               <link>https://raw.githubusercontent.com/xcy960815/maccy/master/appcast.xml</link>
               <description>Most recent changes with links to updates.</description>
               <language>en</language>
@@ -100,7 +100,7 @@ jobs:
                 <releaseNotesLink>https://github.com/xcy960815/maccy/releases/tag/${TAG_NAME}</releaseNotesLink>
                 <sparkle:minimumSystemVersion>${MINIMUM_SYSTEM_VERSION}</sparkle:minimumSystemVersion>
                 <enclosure
-                  url="https://github.com/xcy960815/maccy/releases/download/${TAG_NAME}/Maccy-${TAG_NAME}-unsigned.app.zip"
+                  url="https://github.com/xcy960815/maccy/releases/download/${TAG_NAME}/Clipbook-${TAG_NAME}-unsigned.app.zip"
                   sparkle:version="${BUILD_VERSION}"
                   sparkle:shortVersionString="${SHORT_VERSION}"
                   length="${ASSET_SIZE}"
