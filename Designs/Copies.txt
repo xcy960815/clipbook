@@ -1,5 +1,5 @@
 Hello! 👋
-This is Maccy.
+This is Clipbook.
 Clipboard manager for Mac. 💻
 Search as you type. 🔍
 Open source. ⚙️

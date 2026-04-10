@@ -1,15 +1,15 @@
-<img width="128px" src="https://maccy.app/img/maccy/Logo.png" alt="Logo" />
+<img width="128px" src="https://clipbook.app/img/clipbook/Logo.png" alt="Logo" />
 
-# [Maccy](https://maccy.app)
+# [Clipbook](https://clipbook.app)
 
 [English](README.md) | [简体中文](README-CN.md)
 
-[![Downloads](https://img.shields.io/github/downloads/xcy960815/maccy/total.svg)](https://github.com/xcy960815/maccy/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/xcy960815/clipbook/total.svg)](https://github.com/xcy960815/clipbook/releases/latest)
 [![Build Status](https://img.shields.io/bitrise/716921b669780314/master?token=3pMiCb5dpFzlO-7jTYtO3Q)](https://app.bitrise.io/app/716921b669780314)
 
-Maccy 是一款轻量级的 macOS 剪贴板管理器。它会保存你的复制历史，方便你快速浏览、搜索并再次使用之前复制过的内容。
+Clipbook 是一款轻量级的 macOS 剪贴板管理器。它会保存你的复制历史，方便你快速浏览、搜索并再次使用之前复制过的内容。
 
-Maccy 需要 macOS Sonoma 14 或更高版本。
+Clipbook 需要 macOS Sonoma 14 或更高版本。
 
 <!-- vim-markdown-toc GFM -->
 
@@ -23,12 +23,12 @@ Maccy 需要 macOS Sonoma 14 或更高版本。
   * [加快剪贴板检查间隔](#加快剪贴板检查间隔)
 * [常见问题](#常见问题)
   * [为什么我选择历史项后没有自动粘贴？](#为什么我选择历史项后没有自动粘贴)
-  * [给 Maccy 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？](#给-maccy-设置打开快捷键时系统提示该快捷键已被占用怎么办)
+  * [给 Clipbook 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？](#给-clipbook-设置打开快捷键时系统提示该快捷键已被占用怎么办)
   * [如何恢复被隐藏的底部栏？](#如何恢复被隐藏的底部栏)
   * [如何忽略 Universal Clipboard 的内容？](#如何忽略-universal-clipboard-的内容)
   * [我的快捷键在密码输入框里失效了，怎么办？](#我的快捷键在密码输入框里失效了怎么办)
 * [翻译](#翻译)
-* [为什么要做 Maccy](#为什么要做-maccy)
+* [为什么要做 Clipbook](#为什么要做-clipbook)
 * [许可证](#许可证)
 
 <!-- vim-markdown-toc -->
@@ -48,16 +48,16 @@ Maccy 需要 macOS Sonoma 14 或更高版本。
 
 ## 安装
 
-* 从 [Releases](https://github.com/xcy960815/maccy/releases/latest) 页面下载最新版本。
+* 从 [Releases](https://github.com/xcy960815/clipbook/releases/latest) 页面下载最新版本。
 * 或通过 [Homebrew](https://brew.sh/) 安装：
 
 ```sh
-brew install maccy
+brew install clipbook
 ```
 
 ## 使用方法
 
-1. 按 <kbd>SHIFT (⇧)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>C</kbd> 打开 Maccy，或者点击菜单栏图标。
+1. 按 <kbd>SHIFT (⇧)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>C</kbd> 打开 Clipbook，或者点击菜单栏图标。
    你也可以在“偏好设置 -> 通用”里启用“双击唤醒”，并选择 <kbd>OPTION (⌥)</kbd>、<kbd>SHIFT (⇧)</kbd> 或 <kbd>CONTROL (⌃)</kbd> 作为触发键。启用后，原来的弹窗快捷键会暂时禁用；关闭该选项后会自动恢复。
 2. 输入想搜索的内容。
 3. 选择想要复制的历史项时，可以按 <kbd>ENTER</kbd>，也可以点击该条目，或者使用 <kbd>COMMAND (⌘)</kbd> + `n` 快捷键。
@@ -67,7 +67,7 @@ brew install maccy
 7. 想查看历史项完整文本时，将鼠标停留几秒即可看到提示。
 8. 想把历史项固定在顶部时，按 <kbd>OPTION (⌥)</kbd> + <kbd>P</kbd>。该条目会移动到列表顶部，并分配一个随机但固定的快捷键。再次按 <kbd>OPTION (⌥)</kbd> + <kbd>P</kbd> 可取消固定。
 9. 清空所有未固定条目时，可以在菜单中选择 _Clear_，或者按 <kbd>OPTION (⌥)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>DELETE (⌫)</kbd>。若要清空包括已固定项目在内的全部内容，可以按住 <kbd>OPTION (⌥)</kbd> 再点击菜单中的 _Clear_，或者按 <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>DELETE (⌫)</kbd>。
-10. 若要临时禁用 Maccy 并忽略新复制的内容，可以按住 <kbd>OPTION (⌥)</kbd> 点击菜单栏图标。
+10. 若要临时禁用 Clipbook 并忽略新复制的内容，可以按住 <kbd>OPTION (⌥)</kbd> 点击菜单栏图标。
 11. 若只想忽略下一次复制，可以按住 <kbd>OPTION (⌥)</kbd> + <kbd>SHIFT (⇧)</kbd> 点击菜单栏图标。
 12. 若要自定义行为，可打开“偏好设置…”窗口，或者按 <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd>。
 
@@ -75,10 +75,10 @@ brew install maccy
 
 ### 忽略复制内容
 
-你可以让 Maccy 忽略所有新复制的内容：
+你可以让 Clipbook 忽略所有新复制的内容：
 
 ```sh
-defaults write org.p0deje.Maccy ignoreEvents true # 默认值为 false
+defaults write org.p0deje.Clipbook ignoreEvents true # 默认值为 false
 ```
 
 如果你的工作流里会处理敏感信息，这个功能很有用。你可以先把 `ignoreEvents` 设为 `true`，完成复制后再改回 `false`。
@@ -87,7 +87,7 @@ defaults write org.p0deje.Maccy ignoreEvents true # 默认值为 false
 
 ### 忽略自定义复制类型
 
-默认情况下，Maccy 会忽略某些被认为是机密或临时数据的复制类型。默认始终会忽略以下类型：
+默认情况下，Clipbook 会忽略某些被认为是机密或临时数据的复制类型。默认始终会忽略以下类型：
 
 * `org.nspasteboard.TransientType`
 * `org.nspasteboard.ConcealedType`
@@ -103,14 +103,14 @@ defaults write org.p0deje.Maccy ignoreEvents true # 默认值为 false
 
 你也可以通过设置添加更多自定义类型。
 如果想查看某个应用使用了哪些自定义复制类型，可以使用免费的 [Pasteboard-Viewer](https://github.com/sindresorhus/Pasteboard-Viewer)。
-下载安装后，打开应用，复制目标应用中的内容，再查看左侧栏里出现的自定义类型即可。你也可以到当前仓库的 [Issues](https://github.com/xcy960815/maccy/issues) 中查看相关讨论。
+下载安装后，打开应用，复制目标应用中的内容，再查看左侧栏里出现的自定义类型即可。你也可以到当前仓库的 [Issues](https://github.com/xcy960815/clipbook/issues) 中查看相关讨论。
 
 ### 加快剪贴板检查间隔
 
-默认情况下，Maccy 每 500 毫秒检查一次剪贴板，对大多数用户已经足够。如果你想进一步加快速度，可以使用 `defaults` 修改：
+默认情况下，Clipbook 每 500 毫秒检查一次剪贴板，对大多数用户已经足够。如果你想进一步加快速度，可以使用 `defaults` 修改：
 
 ```sh
-defaults write org.p0deje.Maccy clipboardCheckInterval 0.1 # 100 ms
+defaults write org.p0deje.Clipbook clipboardCheckInterval 0.1 # 100 ms
 ```
 
 ## 常见问题
@@ -118,26 +118,26 @@ defaults write org.p0deje.Maccy clipboardCheckInterval 0.1 # 100 ms
 ### 为什么我选择历史项后没有自动粘贴？
 
 1. 确认你已经在偏好设置里启用了 “Paste automatically”。
-2. 确认 “Maccy” 已加入“系统设置 -> 隐私与安全性 -> 辅助功能”。
+2. 确认 “Clipbook” 已加入“系统设置 -> 隐私与安全性 -> 辅助功能”。
 
-### 给 Maccy 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？
+### 给 Clipbook 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？
 
 1. 打开“系统设置 -> 键盘 -> 键盘快捷键”。
 2. 找到占用了该快捷键的位置。例如，“将文本转换为简体中文” 位于“服务 -> 文本”下。
 3. 关闭该快捷键，或在对应的系统快捷键条目中移除已分配的组合键。
-4. 重启 Maccy。
-5. 再次在 Maccy 设置中分配快捷键。
+4. 重启 Clipbook。
+5. 再次在 Clipbook 设置中分配快捷键。
 
 ### 如何恢复被隐藏的底部栏？
 
-1. 打开 Maccy 窗口。
+1. 打开 Clipbook 窗口。
 2. 按 <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd> 打开偏好设置。
 3. 在外观设置中重新启用底部栏。
 
 如果因为某些原因无法操作，也可以在终端里执行：
 
 ```sh
-defaults write org.p0deje.Maccy showFooter 1
+defaults write org.p0deje.Clipbook showFooter 1
 ```
 
 ### 如何忽略 Universal Clipboard 的内容？
@@ -151,12 +151,12 @@ defaults write org.p0deje.Maccy showFooter 1
 
 ## 翻译
 
-翻译托管在 [Weblate](https://hosted.weblate.org/engage/maccy/) 上。
-你可以在这里提交翻译修改建议，或者为 Maccy 增加新的语言支持。
+翻译托管在 [Weblate](https://hosted.weblate.org/engage/clipbook/) 上。
+你可以在这里提交翻译修改建议，或者为 Clipbook 增加新的语言支持。
 
-[![Translation status](https://hosted.weblate.org/widget/maccy/multi-auto.svg)](https://hosted.weblate.org/engage/maccy/)
+[![Translation status](https://hosted.weblate.org/widget/clipbook/multi-auto.svg)](https://hosted.weblate.org/engage/clipbook/)
 
-## 为什么要做 Maccy
+## 为什么要做 Clipbook
 
 市面上已经有很多类似应用了，为什么还要再做一个？
 自从我从 Linux 转到 macOS 之后，这些年一直没找到一款像 [Parcellite](http://parcellite.sourceforge.net) 那样免费、简单又顺手的剪贴板管理器。

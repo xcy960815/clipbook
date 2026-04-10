@@ -1,17 +1,17 @@
 
-<img width="128px" src="https://maccy.app/img/maccy/Logo.png" alt="Logo" />
+<img width="128px" src="https://clipbook.app/img/clipbook/Logo.png" alt="Logo" />
 
-# [Maccy](https://maccy.app)
+# [Clipbook](https://clipbook.app)
 
 [English](README.md) | [简体中文](README-CN.md)
 
-[![Downloads](https://img.shields.io/github/downloads/xcy960815/maccy/total.svg)](https://github.com/xcy960815/maccy/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/xcy960815/clipbook/total.svg)](https://github.com/xcy960815/clipbook/releases/latest)
 [![Build Status](https://img.shields.io/bitrise/716921b669780314/master?token=3pMiCb5dpFzlO-7jTYtO3Q)](https://app.bitrise.io/app/716921b669780314)
 
-Maccy is a lightweight clipboard manager for macOS. It keeps the history of what you copy
+Clipbook is a lightweight clipboard manager for macOS. It keeps the history of what you copy
 and lets you quickly navigate, search, and use previous clipboard contents.
 
-Maccy works on macOS Sonoma 14 or later.
+Clipbook works on macOS Sonoma 14 or higher.
 
 <!-- vim-markdown-toc GFM -->
 
@@ -25,7 +25,7 @@ Maccy works on macOS Sonoma 14 or later.
   * [Speed up Clipboard Check Interval](#speed-up-clipboard-check-interval)
 * [FAQ](#faq)
   * [Why doesn't it paste when I select an item in history?](#why-doesnt-it-paste-when-i-select-an-item-in-history)
-  * [When assigning a hotkey to open Maccy, it says that this hotkey is already used in some system setting.](#when-assigning-a-hotkey-to-open-maccy-it-says-that-this-hotkey-is-already-used-in-some-system-setting)
+  * [When assigning a hotkey to open Clipbook, it says that this hotkey is already used in some system setting.](#when-assigning-a-hotkey-to-open-clipbook-it-says-that-this-hotkey-is-already-used-in-some-system-setting)
   * [How to restore hidden footer?](#how-to-restore-hidden-footer)
   * [How to ignore copies from Universal Clipboard?](#how-to-ignore-copies-from-universal-clipboard)
   * [My keyboard shortcut stopped working in password fields. How do I fix this?](#my-keyboard-shortcut-stopped-working-in-password-fields-how-do-i-fix-this)
@@ -50,16 +50,16 @@ Maccy works on macOS Sonoma 14 or later.
 
 ## Installation
 
-* Download the latest version from the [releases](https://github.com/xcy960815/maccy/releases/latest) page.
+* Download the latest version from the [releases](https://github.com/xcy960815/clipbook/releases/latest) page.
 * Or install it with [Homebrew](https://brew.sh/):
 
 ```sh
-brew install maccy
+brew install clipbook
 ```
 
 ## Usage
 
-1. Press <kbd>SHIFT (⇧)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>C</kbd> to open Maccy, or click its icon in the menu bar.
+1. Press <kbd>SHIFT (⇧)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>C</kbd> to open Clipbook, or click its icon in the menu bar.
    You can also enable "double-click to open" in Preferences -> General and choose <kbd>OPTION (⌥)</kbd>, <kbd>SHIFT (⇧)</kbd>, or <kbd>CONTROL (⌃)</kbd> as the trigger. When enabled, the regular popup shortcut is temporarily disabled and restored automatically when you turn the option off.
 2. Type what you want to find.
 3. To select the history item you wish to copy, press <kbd>ENTER</kbd>, or click the item, or use <kbd>COMMAND (⌘)</kbd> + `n` shortcut.
@@ -69,7 +69,7 @@ brew install maccy
 7. To see the full text of the history item, wait a couple of seconds for tooltip.
 8. To pin the history item so that it remains on top of the list, press <kbd>OPTION (⌥)</kbd> + <kbd>P</kbd>. The item will be moved to the top with a random but permanent keyboard shortcut. To unpin it, press <kbd>OPTION (⌥)</kbd> + <kbd>P</kbd> again.
 9. To clear all unpinned items, select _Clear_ in the menu, or press <kbd>OPTION (⌥)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>DELETE (⌫)</kbd>. To clear all items including pinned, select _Clear_ in the menu with  <kbd>OPTION (⌥)</kbd> pressed, or press <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>COMMAND (⌘)</kbd> + <kbd>DELETE (⌫)</kbd>.
-10. To disable Maccy and ignore new copies, click on the menu icon with <kbd>OPTION (⌥)</kbd> pressed.
+10. To disable Clipbook and ignore new copies, click on the menu icon with <kbd>OPTION (⌥)</kbd> pressed.
 11. To ignore only the next copy, click on the menu icon with <kbd>OPTION (⌥)</kbd> + <kbd>SHIFT (⇧)</kbd> pressed.
 12. To customize the behavior, check "Preferences…" window, or press <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd>.
 
@@ -77,10 +77,10 @@ brew install maccy
 
 ### Ignore Copied Items
 
-You can tell Maccy to ignore all copied items:
+You can tell Clipbook to ignore all copied items:
 
 ```sh
-defaults write org.p0deje.Maccy ignoreEvents true # default is false
+defaults write org.p0deje.Clipbook ignoreEvents true # default is false
 ```
 
 This is useful if you have some workflow for copying sensitive data. You can set `ignoreEvents` to true, copy the data and set `ignoreEvents` back to false.
@@ -89,7 +89,7 @@ You can also click the menu icon with <kbd>OPTION (⌥)</kbd> pressed. To ignore
 
 ### Ignore Custom Copy Types
 
-By default Maccy will ignore certain copy types that are considered to be confidential
+By default Clipbook will ignore certain copy types that are considered to be confidential
 or temporary. The default list always include the following types:
 
 * `org.nspasteboard.TransientType`
@@ -110,15 +110,15 @@ To find what custom types are used by an application, you can use
 free application [Pasteboard-Viewer](https://github.com/sindresorhus/Pasteboard-Viewer).
 Simply download the application, open it, copy something from the application you
 want to ignore and look for any custom types in the left sidebar. You can also browse
-related discussions in the [issue tracker](https://github.com/xcy960815/maccy/issues).
+related discussions in the [issue tracker](https://github.com/xcy960815/clipbook/issues).
 
 ### Speed up Clipboard Check Interval
 
-By default, Maccy checks clipboard every 500 ms, which should be enough for most users. If you want
+By default, Clipbook checks clipboard every 500 ms, which should be enough for most users. If you want
 to speed it up, you can change it with `defaults`:
 
 ```sh
-defaults write org.p0deje.Maccy clipboardCheckInterval 0.1 # 100 ms
+defaults write org.p0deje.Clipbook clipboardCheckInterval 0.1 # 100 ms
 ```
 
 ## FAQ
@@ -126,26 +126,26 @@ defaults write org.p0deje.Maccy clipboardCheckInterval 0.1 # 100 ms
 ### Why doesn't it paste when I select an item in history?
 
 1. Make sure you have "Paste automatically" enabled in Preferences.
-2. Make sure "Maccy" is added to System Settings -> Privacy & Security -> Accessibility.
+2. Make sure "Clipbook" is added to System Settings -> Privacy & Security -> Accessibility.
 
-### When assigning a hotkey to open Maccy, it says that this hotkey is already used in some system setting.
+### When assigning a hotkey to open Clipbook, it says that this hotkey is already used in some system setting.
 
 1. Open System settings -> Keyboard -> Keyboard Shortcuts.
 2. Find where that hotkey is used. For example, "Convert text to simplified Chinese" is under Services -> Text.
 3. Disable that hotkey or remove the assigned combination in the corresponding system shortcut entry.
-4. Restart Maccy.
-5. Assign hotkey in Maccy settings.
+4. Restart Clipbook.
+5. Assign hotkey in Clipbook settings.
 
 ### How to restore hidden footer?
 
-1. Open Maccy window.
+1. Open Clipbook window.
 2. Press <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd> to open preferences.
 3. Enable footer in Appearance section.
 
 If for some reason it doesn't work, run the following command in Terminal.app:
 
 ```sh
-defaults write org.p0deje.Maccy showFooter 1
+defaults write org.p0deje.Clipbook showFooter 1
 ```
 
 ### How to ignore copies from [Universal Clipboard](https://support.apple.com/en-us/102430)?
@@ -159,10 +159,10 @@ If your shortcut produces a character (like `Option+C` → "ç"), macOS security
 
 ## Translations
 
-The translations are hosted in [Weblate](https://hosted.weblate.org/engage/maccy/).
+The translations are hosted in [Weblate](https://hosted.weblate.org/engage/clipbook/).
 You can use it to suggest changes in translations and localize the application to a new language.
 
-[![Translation status](https://hosted.weblate.org/widget/maccy/multi-auto.svg)](https://hosted.weblate.org/engage/maccy/)
+[![Translation status](https://hosted.weblate.org/widget/clipbook/multi-auto.svg)](https://hosted.weblate.org/engage/clipbook/)
 
 ## Motivation
 
