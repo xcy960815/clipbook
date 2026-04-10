@@ -90,17 +90,17 @@ jobs:
           <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
             <channel>
               <title>Clipbook</title>
-              <link>https://raw.githubusercontent.com/xcy960815/maccy/master/appcast.xml</link>
+              <link>https://raw.githubusercontent.com/xcy960815/Clipbook/master/appcast.xml</link>
               <description>Most recent changes with links to updates.</description>
               <language>en</language>
               <item>
                 <title>${SHORT_VERSION}</title>
                 <description><![CDATA[<p>See the release notes for details.</p>]]></description>
                 <pubDate>$(date -u '+%a, %d %b %Y %H:%M:%S GMT')</pubDate>
-                <releaseNotesLink>https://github.com/xcy960815/maccy/releases/tag/${TAG_NAME}</releaseNotesLink>
+                <releaseNotesLink>https://github.com/xcy960815/Clipbook/releases/tag/${TAG_NAME}</releaseNotesLink>
                 <sparkle:minimumSystemVersion>${MINIMUM_SYSTEM_VERSION}</sparkle:minimumSystemVersion>
                 <enclosure
-                  url="https://github.com/xcy960815/maccy/releases/download/${TAG_NAME}/Clipbook-${TAG_NAME}-unsigned.app.zip"
+                  url="https://github.com/xcy960815/Clipbook/releases/download/${TAG_NAME}/Clipbook-${TAG_NAME}-unsigned.app.zip"
                   sparkle:version="${BUILD_VERSION}"
                   sparkle:shortVersionString="${SHORT_VERSION}"
                   length="${ASSET_SIZE}"
