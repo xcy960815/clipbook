@@ -168,7 +168,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       }
     }
 
-    panel.toggle(height: AppState.shared.popup.height, at: .statusItem)
+    panel.toggle(height: AppState.shared.popup.height)
   }
 
   private func synchronizeMenuIconText() {

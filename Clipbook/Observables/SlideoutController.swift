@@ -130,13 +130,21 @@ final class SlideoutController: ObservableObject {
   }
 
   func computePlacement(window: NSWindow, for size: NSSize) -> SlideoutPlacement {
-    guard let screen = window.screen?.frame else { return placement }
+    guard let screen = window.screen?.visibleFrame else { return placement }
     let windowFrame = window.frame
-    if windowFrame.minX + size.width > screen.maxX {
-      return .left
-    } else {
+    let rightMaxX = windowFrame.minX + size.width
+    if rightMaxX <= screen.maxX {
       return .right
     }
+
+    let leftMinX = windowFrame.minX - slideoutWidth
+    if leftMinX >= screen.minX {
+      return .left
+    }
+
+    let rightOverflow = rightMaxX - screen.maxX
+    let leftOverflow = screen.minX - leftMinX
+    return leftOverflow < rightOverflow ? .left : .right
   }
 
   func computeSizeWithPreview(_ size: NSSize, state newState: SlideoutState) -> NSSize {
@@ -195,6 +203,13 @@ final class SlideoutController: ObservableObject {
             }
           }
           context.duration = Self.animationDuration
+          if let visibleFrame = window.screen?.visibleFrame {
+            newOrigin = NSRect.clampedOrigin(
+              ofSize: newSize,
+              in: visibleFrame,
+              proposedOrigin: newOrigin
+            )
+          }
           window.animator().setFrame(
             NSRect(origin: newOrigin, size: newSize),
             display: true

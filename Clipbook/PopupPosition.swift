@@ -66,4 +66,15 @@ enum PopupPosition: String, CaseIterable, Identifiable, CustomStringConvertible,
     point.y -= size.height
     return point
   }
+
+  func visibleFrame(statusBarButton: NSStatusBarButton?) -> NSRect? {
+    switch self {
+    case .center, .lastPosition:
+      return NSScreen.forPopup?.visibleFrame
+    case .statusItem:
+      return statusBarButton?.window?.screen?.visibleFrame ?? NSScreen.main?.visibleFrame
+    case .window, .cursor:
+      return NSScreen.main?.visibleFrame
+    }
+  }
 }
