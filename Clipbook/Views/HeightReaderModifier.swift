@@ -1,13 +1,5 @@
 import SwiftUI
 
-private struct SizePreferenceKey: PreferenceKey {
-  static var defaultValue: CGSize = .zero
-
-  static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
-    value = nextValue()
-  }
-}
-
 struct SizeReaderModifier<Value: Equatable>: ViewModifier {
   @Binding var value: Value
   let mapper: (CGSize) -> Value
@@ -17,15 +9,14 @@ struct SizeReaderModifier<Value: Equatable>: ViewModifier {
       .background(
         GeometryReader { proxy in
           Color.clear
-            .preference(key: SizePreferenceKey.self, value: proxy.size)
+            .task(id: proxy.size) {
+              let mappedValue = mapper(proxy.size)
+              if mappedValue != value {
+                value = mappedValue
+              }
+            }
         }
       )
-      .onPreferenceChange(SizePreferenceKey.self) { newSize in
-        let mappedValue = mapper(newSize)
-        if mappedValue != value {
-          value = mappedValue
-        }
-      }
   }
 }
 

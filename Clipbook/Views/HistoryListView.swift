@@ -73,10 +73,6 @@ struct HistoryListView: View {
     let scrollTopPadding = topSeparatorVisible ? Popup.verticalSeparatorPadding : topPadding
     let scrollBottomPadding = bottomSeparatorVisible ? Popup.verticalSeparatorPadding : bottomPadding
 
-    // Return these 3 views as direct siblings (TupleView), matching the
-    // original layout structure so the parent VStack in ContentView
-    // distributes space correctly among them.
-
     VStack(spacing: 0) {
       if let stack = appState.history.pasteStack,
          !stack.items.isEmpty {
@@ -103,8 +99,6 @@ struct HistoryListView: View {
         MultipleSelectionListView(items: unpinnedItems) { previous, item, next, index in
           HistoryItemView(item: item, previous: previous, next: next, index: index)
         }
-        .frame(maxWidth: .infinity, alignment: .topLeading)
-        .fixedSize(horizontal: false, vertical: true)
         .padding(.top, scrollTopPadding)
         .padding(.bottom, scrollBottomPadding)
         .task(id: appState.navigator.scrollTarget) {
@@ -118,8 +112,8 @@ struct HistoryListView: View {
             appState.navigator.scrollTarget = nil
           }
         }
-        .onChange(of: scenePhase) { newScenePhase in
-          if newScenePhase == .active {
+        .onChange(of: scenePhase) { _ in
+          if scenePhase == .active {
             searchFocused = true
             appState.navigator.isKeyboardNavigating = true
             appState.navigator.select(item: appState.history.unpinnedItems.first ?? appState.history.pinnedItems.first)
@@ -132,9 +126,7 @@ struct HistoryListView: View {
             appState.preview.cancelAutoOpen()
           }
         }
-        // Calculate the total height inside a scroll view.
-        // Only fire when the popup explicitly requests a resize (needsResize).
-        .background(
+        .background {
           GeometryReader { geo in
             Color.clear
               .task(id: appState.popup.needsResize) {
@@ -146,7 +138,7 @@ struct HistoryListView: View {
                 }
               }
           }
-        )
+        }
       }
     }
 

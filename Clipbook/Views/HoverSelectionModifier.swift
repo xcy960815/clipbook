@@ -6,13 +6,17 @@ private struct HoverSelectionModifier: ViewModifier {
 
   func body(content: Content) -> some View {
     content.onHover { hovering in
-      if hovering {
-        if !appState.navigator.isKeyboardNavigating && !appState.navigator.isMultiSelectInProgress {
-          appState.navigator.selectWithoutScrolling(id: id)
-        } else {
-          appState.navigator.hoverSelectionWhileKeyboardNavigating = id
-        }
+      guard hovering else { return }
+      guard !appState.navigator.isMultiSelectInProgress else { return }
+
+      if appState.navigator.isKeyboardNavigating {
+        // Switch to mouse-driven selection immediately so the highlight
+        // follows the pointer without waiting for a separate mouse-move event.
+        appState.navigator.hoverSelectionWhileKeyboardNavigating = nil
+        appState.navigator.isKeyboardNavigating = false
       }
+
+      appState.navigator.selectWithoutScrolling(id: id)
     }
   }
 }
