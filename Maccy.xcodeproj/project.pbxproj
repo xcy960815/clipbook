@@ -542,7 +542,7 @@
 		DAE284FF232257D20080E394 /* ColorImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorImage.swift; sourceTree = "<group>"; };
 		DAE2850123225BD90080E394 /* ColorImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorImageTests.swift; sourceTree = "<group>"; };
 		DAE8F5D32C43262B00851CA9 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
-		DAEE38431E3DBEB100DD2966 /* Maccy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maccy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAEE38431E3DBEB100DD2966 /* Clipbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clipbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE38461E3DBEB100DD2966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAEE384D1E3DBEB100DD2966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF4741E27BB568000B53057 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -798,7 +798,7 @@
 		DAEE38441E3DBEB100DD2966 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAEE38431E3DBEB100DD2966 /* Maccy.app */,
+				DAEE38431E3DBEB100DD2966 /* Clipbook.app */,
 				DA360DB01E3DF137005C6F6B /* MaccyTests.xctest */,
 				DA0EE7B6204657830025FC60 /* MaccyUITests.xctest */,
 			);
@@ -916,8 +916,8 @@
 				DAC0CA3D2C88E7A4003BF498 /* Fuse */,
 				2F12271D2E5C932200A1592A /* Logging */,
 			);
-			productName = Maccy;
-			productReference = DAEE38431E3DBEB100DD2966 /* Maccy.app */;
+			productName = Clipbook;
+			productReference = DAEE38431E3DBEB100DD2966 /* Clipbook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1529,7 +1529,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.MaccyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.ClipbookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1556,7 +1556,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.MaccyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.ClipbookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1580,11 +1580,11 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.MaccyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.ClipbookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maccy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maccy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipbook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Clipbook";
 			};
 			name = Debug;
 		};
@@ -1604,11 +1604,11 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.MaccyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.ClipbookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maccy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maccy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipbook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Clipbook";
 			};
 			name = Release;
 		};
@@ -1758,8 +1758,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Maccy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Clipbook;
+				PRODUCT_MODULE_NAME = Maccy;
+				PRODUCT_NAME = Clipbook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1793,8 +1794,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Maccy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Clipbook;
+				PRODUCT_MODULE_NAME = Maccy;
+				PRODUCT_NAME = Clipbook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
