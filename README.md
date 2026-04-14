@@ -1,11 +1,9 @@
 
-<img width="128px" src="https://maccy.app/img/maccy/Logo.png" alt="Logo" />
-
-# [Clipbook](https://maccy.app)
+# [Clipbook](https://github.com/xcy960815/Clipbook)
 
 [English](README.md) | [简体中文](README-CN.md)
 
-[![Downloads](https://img.shields.io/github/downloads/xcy960815/maccy/total.svg)](https://github.com/xcy960815/maccy/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/xcy960815/Clipbook/total.svg)](https://github.com/xcy960815/Clipbook/releases/latest)
 [![Build Status](https://img.shields.io/bitrise/716921b669780314/master?token=3pMiCb5dpFzlO-7jTYtO3Q)](https://app.bitrise.io/app/716921b669780314)
 
 Clipbook is a lightweight clipboard manager for macOS. It keeps the history of what you copy
@@ -25,11 +23,10 @@ Clipbook works on macOS Sonoma 14 or later.
   * [Speed up Clipboard Check Interval](#speed-up-clipboard-check-interval)
 * [FAQ](#faq)
   * [Why doesn't it paste when I select an item in history?](#why-doesnt-it-paste-when-i-select-an-item-in-history)
-  * [When assigning a hotkey to open Clipbook, it says that this hotkey is already used in some system setting.](#when-assigning-a-hotkey-to-open-maccy-it-says-that-this-hotkey-is-already-used-in-some-system-setting)
+  * [When assigning a hotkey to open Clipbook, it says that this hotkey is already used in some system setting.](#when-assigning-a-hotkey-to-open-clipbook-it-says-that-this-hotkey-is-already-used-in-some-system-setting)
   * [How to restore hidden footer?](#how-to-restore-hidden-footer)
   * [How to ignore copies from Universal Clipboard?](#how-to-ignore-copies-from-universal-clipboard)
   * [My keyboard shortcut stopped working in password fields. How do I fix this?](#my-keyboard-shortcut-stopped-working-in-password-fields-how-do-i-fix-this)
-* [Translations](#translations)
 * [Motivation](#motivation)
 * [License](#license)
 
@@ -50,12 +47,7 @@ Clipbook works on macOS Sonoma 14 or later.
 
 ## Installation
 
-* Download the latest version from the [releases](https://github.com/xcy960815/maccy/releases/latest) page.
-* Or install it with [Homebrew](https://brew.sh/):
-
-```sh
-brew install maccy
-```
+* Download the latest version from the [releases](https://github.com/xcy960815/Clipbook/releases/latest) page.
 
 ## Usage
 
@@ -110,7 +102,7 @@ To find what custom types are used by an application, you can use
 free application [Pasteboard-Viewer](https://github.com/sindresorhus/Pasteboard-Viewer).
 Simply download the application, open it, copy something from the application you
 want to ignore and look for any custom types in the left sidebar. You can also browse
-related discussions in the [issue tracker](https://github.com/xcy960815/maccy/issues).
+related discussions in the [issue tracker](https://github.com/xcy960815/Clipbook/issues).
 
 ### Speed up Clipboard Check Interval
 
@@ -156,13 +148,6 @@ defaults write org.p0deje.Clipbook showFooter 1
 ### My keyboard shortcut stopped working in password fields. How do I fix this?
 
 If your shortcut produces a character (like `Option+C` → "ç"), macOS security may block it in password fields. Use [Karabiner-Elements](https://karabiner-elements.pqrs.org/) to remap your shortcut to a different combination like `Cmd+Shift+C`. [See detailed solution](docs/keyboard-shortcut-password-fields.md).
-
-## Translations
-
-The translations are hosted in [Weblate](https://hosted.weblate.org/engage/maccy/).
-You can use it to suggest changes in translations and localize the application to a new language.
-
-[![Translation status](https://hosted.weblate.org/widget/maccy/multi-auto.svg)](https://hosted.weblate.org/engage/maccy/)
 
 ## Motivation
 

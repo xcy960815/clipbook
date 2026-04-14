@@ -4,8 +4,8 @@ class About {
   private var links: NSMutableAttributedString {
     let string = NSMutableAttributedString(string: "GitHub│Support",
                                            attributes: [NSAttributedString.Key.foregroundColor: NSColor.labelColor])
-    string.addAttribute(.link, value: "https://github.com/xcy960815/maccy", range: NSRange(location: 0, length: 6))
-    string.addAttribute(.link, value: "https://github.com/xcy960815/maccy/issues", range: NSRange(location: 7, length: 7))
+    string.addAttribute(.link, value: "https://github.com/xcy960815/Clipbook", range: NSRange(location: 0, length: 6))
+    string.addAttribute(.link, value: "https://github.com/xcy960815/Clipbook/issues", range: NSRange(location: 7, length: 7))
     return string
   }
 

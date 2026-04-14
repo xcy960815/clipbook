@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Clipbook</title>
-    <link>https://raw.githubusercontent.com/xcy960815/maccy/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/xcy960815/Clipbook/master/appcast.xml</link>
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
       <title>0.0.1</title>
       <description><![CDATA[<p>See the release notes for details.</p>]]></description>
       <pubDate>Wed, 08 Apr 2026 15:39:26 GMT</pubDate>
-      <releaseNotesLink>https://github.com/xcy960815/maccy/releases/tag/0.0.1</releaseNotesLink>
+      <releaseNotesLink>https://github.com/xcy960815/Clipbook/releases/tag/0.0.1</releaseNotesLink>
       <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
       <enclosure
-        url="https://github.com/xcy960815/maccy/releases/download/0.0.1/Clipbook-0.0.1-unsigned.app.zip"
+        url="https://github.com/xcy960815/Clipbook/releases/download/0.0.1/Clipbook-0.0.1-unsigned.app.zip"
         sparkle:version="1"
         sparkle:shortVersionString="0.0.1"
         length="8351558"

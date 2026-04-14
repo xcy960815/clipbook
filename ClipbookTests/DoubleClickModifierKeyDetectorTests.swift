@@ -1,6 +1,6 @@
 import AppKit
 import XCTest
-@testable import Maccy
+@testable import Clipbook
 
 class DoubleClickModifierKeyDetectorTests: XCTestCase {
   func testDoubleOptionTapTriggersOption() {

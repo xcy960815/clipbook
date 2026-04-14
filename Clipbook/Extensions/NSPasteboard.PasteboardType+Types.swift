@@ -16,7 +16,7 @@ extension NSPasteboard.PasteboardType: Defaults.Serializable {
   static let modified = NSPasteboard.PasteboardType(rawValue: "x.nspasteboard.ModifiedType")
 
   // Marks that copy was made from Clipbook.
-  static let fromMaccy = NSPasteboard.PasteboardType(rawValue: "org.p0deje.Clipbook")
+  static let fromClipbook = NSPasteboard.PasteboardType(rawValue: "org.p0deje.Clipbook")
 
   // Types that indicate Microsoft Word bookmarks (links).
   static let microsoftObjectLink = NSPasteboard.PasteboardType(rawValue: "com.microsoft.ObjectLink")

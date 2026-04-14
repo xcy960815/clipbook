@@ -141,7 +141,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       Defaults[.migrations]["2026-04-01-double-click-modifier"] = true
     }
 
-    // The following defaults are not used in Maccy 2.x
+    if Defaults[.migrations]["2026-04-14-menu-icon-rename"] != true {
+      if UserDefaults.standard.string(forKey: "menuIcon") == "maccy" {
+        Defaults[.menuIcon] = .clipbook
+      }
+
+      Defaults[.migrations]["2026-04-14-menu-icon-rename"] = true
+    }
+
+    // The following defaults are not used in Clipbook 2.x
     // and should be removed in 3.x.
     // - LaunchAtLogin__hasMigrated
     // - avoidTakingFocus

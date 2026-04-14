@@ -621,13 +621,13 @@ class ClipbookUITests: XCTestCase {
 
   private func waitUntilPoppedUp() {
     if !app.staticTexts.firstMatch.waitForExistence(timeout: 3) {
-      XCTFail("Maccy did not pop up")
+      XCTFail("Clipbook did not pop up")
     }
   }
 
   private func assertPopupDismissed() {
     if !app.staticTexts.firstMatch.waitForNonExistence(timeout: 3) {
-      XCTFail("Maccy did not dismiss")
+      XCTFail("Clipbook did not dismiss")
     }
   }
 
@@ -658,7 +658,7 @@ class ClipbookUITests: XCTestCase {
     waitTillClipboardCheck()
   }
 
-  // Default interval for Maccy to check clipboard is 1 second
+  // Default interval for Clipbook to check clipboard is 1 second
   private func waitTillClipboardCheck() {
     usleep(1_500_000)
   }

@@ -155,14 +155,14 @@
 			containerPortal = DAEE383B1E3DBEB100DD2966 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DAEE38421E3DBEB100DD2966;
-			remoteInfo = Maccy;
+			remoteInfo = Clipbook;
 		};
 		DA360DB51E3DF137005C6F6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAEE383B1E3DBEB100DD2966 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DAEE38421E3DBEB100DD2966;
-			remoteInfo = Maccy;
+			remoteInfo = Clipbook;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -245,7 +245,7 @@
 		DA0D57832E424784005101AF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PinsSettings.strings; sourceTree = "<group>"; };
 		DA0D57842E424784005101AF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PreviewItemView.strings; sourceTree = "<group>"; };
 		DA0D57852E424784005101AF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA0EE7B6204657830025FC60 /* MaccyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaccyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0EE7B6204657830025FC60 /* ClipbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0EE7B8204657830025FC60 /* ClipbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipbookUITests.swift; sourceTree = "<group>"; };
 		DA0EF1871E444B2A00E58577 /* Clipboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		DA0FFA292C8D0FEC00A66C97 /* ModifierFlags+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModifierFlags+Description.swift"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		DA2595DE2CBC44BE00A0A7F2 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/PreviewItemView.strings; sourceTree = "<group>"; };
 		DA2595DF2CBC44BE00A0A7F2 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA2F1B0926F22DF4005D30BA /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA360DB01E3DF137005C6F6B /* MaccyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaccyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA360DB01E3DF137005C6F6B /* ClipbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA360DB21E3DF137005C6F6B /* HistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HistoryTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA360DB41E3DF137005C6F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA384E85232746D800603999 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -642,7 +642,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DA0EE7B7204657830025FC60 /* MaccyUITests */ = {
+		DA0EE7B7204657830025FC60 /* ClipbookUITests */ = {
 			isa = PBXGroup;
 			children = (
 				DA0EE7B8204657830025FC60 /* ClipbookUITests.swift */,
@@ -716,7 +716,7 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		DA360DB11E3DF137005C6F6B /* MaccyTests */ = {
+		DA360DB11E3DF137005C6F6B /* ClipbookTests */ = {
 			isa = PBXGroup;
 			children = (
 				DA48AE852A5F0077006D4894 /* Fixtures */,
@@ -783,9 +783,9 @@
 		DAEE383A1E3DBEB100DD2966 = {
 			isa = PBXGroup;
 			children = (
-				DAEE38451E3DBEB100DD2966 /* Maccy */,
-				DA360DB11E3DF137005C6F6B /* MaccyTests */,
-				DA0EE7B7204657830025FC60 /* MaccyUITests */,
+				DAEE38451E3DBEB100DD2966 /* Clipbook */,
+				DA360DB11E3DF137005C6F6B /* ClipbookTests */,
+				DA0EE7B7204657830025FC60 /* ClipbookUITests */,
 				DACCD5822C93605C00BAD74C /* Clipbook.xctestplan */,
 				DA00992C256411F90030E697 /* appcast.xml */,
 				DA00992F256411F90030E697 /* LICENSE */,
@@ -799,13 +799,13 @@
 			isa = PBXGroup;
 			children = (
 				DAEE38431E3DBEB100DD2966 /* Clipbook.app */,
-				DA360DB01E3DF137005C6F6B /* MaccyTests.xctest */,
-				DA0EE7B6204657830025FC60 /* MaccyUITests.xctest */,
+				DA360DB01E3DF137005C6F6B /* ClipbookTests.xctest */,
+				DA0EE7B6204657830025FC60 /* ClipbookUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAEE38451E3DBEB100DD2966 /* Maccy */ = {
+		DAEE38451E3DBEB100DD2966 /* Clipbook */ = {
 			isa = PBXGroup;
 			children = (
 				2F0EC7802E773F1D003E2EA9 /* PasteStack.swift */,
@@ -855,9 +855,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA0EE7B5204657830025FC60 /* MaccyUITests */ = {
+		DA0EE7B5204657830025FC60 /* ClipbookUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA0EE7BF204657840025FC60 /* Build configuration list for PBXNativeTarget "MaccyUITests" */;
+			buildConfigurationList = DA0EE7BF204657840025FC60 /* Build configuration list for PBXNativeTarget "ClipbookUITests" */;
 			buildPhases = (
 				DA0EE7B2204657830025FC60 /* Sources */,
 				DA0EE7B3204657830025FC60 /* Frameworks */,
@@ -868,14 +868,14 @@
 			dependencies = (
 				DA0EE7BC204657840025FC60 /* PBXTargetDependency */,
 			);
-			name = MaccyUITests;
-			productName = MaccyUITests;
-			productReference = DA0EE7B6204657830025FC60 /* MaccyUITests.xctest */;
+			name = ClipbookUITests;
+			productName = ClipbookUITests;
+			productReference = DA0EE7B6204657830025FC60 /* ClipbookUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		DA360DAF1E3DF137005C6F6B /* MaccyTests */ = {
+		DA360DAF1E3DF137005C6F6B /* ClipbookTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA360DB71E3DF137005C6F6B /* Build configuration list for PBXNativeTarget "MaccyTests" */;
+			buildConfigurationList = DA360DB71E3DF137005C6F6B /* Build configuration list for PBXNativeTarget "ClipbookTests" */;
 			buildPhases = (
 				DA360DAC1E3DF137005C6F6B /* Sources */,
 				DA360DAD1E3DF137005C6F6B /* Frameworks */,
@@ -886,14 +886,14 @@
 			dependencies = (
 				DA360DB61E3DF137005C6F6B /* PBXTargetDependency */,
 			);
-			name = MaccyTests;
-			productName = MaccyTests;
-			productReference = DA360DB01E3DF137005C6F6B /* MaccyTests.xctest */;
+			name = ClipbookTests;
+			productName = ClipbookTests;
+			productReference = DA360DB01E3DF137005C6F6B /* ClipbookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DAEE38421E3DBEB100DD2966 /* Maccy */ = {
+		DAEE38421E3DBEB100DD2966 /* Clipbook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAEE38501E3DBEB100DD2966 /* Build configuration list for PBXNativeTarget "Maccy" */;
+			buildConfigurationList = DAEE38501E3DBEB100DD2966 /* Build configuration list for PBXNativeTarget "Clipbook" */;
 			buildPhases = (
 				DAEE383F1E3DBEB100DD2966 /* Sources */,
 				DAEE38401E3DBEB100DD2966 /* Frameworks */,
@@ -904,7 +904,7 @@
 			);
 			dependencies = (
 			);
-			name = Maccy;
+			name = Clipbook;
 			packageProductDependencies = (
 				DA5154D72564102900C01004 /* Sauce */,
 				DA009946256414800030E697 /* SwiftHEXColors */,
@@ -951,7 +951,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAEE383E1E3DBEB100DD2966 /* Build configuration list for PBXProject "Maccy" */;
+			buildConfigurationList = DAEE383E1E3DBEB100DD2966 /* Build configuration list for PBXProject "Clipbook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1004,9 +1004,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAEE38421E3DBEB100DD2966 /* Maccy */,
-				DA360DAF1E3DF137005C6F6B /* MaccyTests */,
-				DA0EE7B5204657830025FC60 /* MaccyUITests */,
+				DAEE38421E3DBEB100DD2966 /* Clipbook */,
+				DA360DAF1E3DF137005C6F6B /* ClipbookTests */,
+				DA0EE7B5204657830025FC60 /* ClipbookUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1192,12 +1192,12 @@
 /* Begin PBXTargetDependency section */
 		DA0EE7BC204657840025FC60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAEE38421E3DBEB100DD2966 /* Maccy */;
+			target = DAEE38421E3DBEB100DD2966 /* Clipbook */;
 			targetProxy = DA0EE7BB204657840025FC60 /* PBXContainerItemProxy */;
 		};
 		DA360DB61E3DF137005C6F6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAEE38421E3DBEB100DD2966 /* Maccy */;
+			target = DAEE38421E3DBEB100DD2966 /* Clipbook */;
 			targetProxy = DA360DB51E3DF137005C6F6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1533,7 +1533,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Maccy;
+				TEST_TARGET_NAME = Clipbook;
 			};
 			name = Debug;
 		};
@@ -1560,7 +1560,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Maccy;
+				TEST_TARGET_NAME = Clipbook;
 			};
 			name = Release;
 		};
@@ -1759,7 +1759,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Clipbook;
-				PRODUCT_MODULE_NAME = Maccy;
+				PRODUCT_MODULE_NAME = Clipbook;
 				PRODUCT_NAME = Clipbook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1795,7 +1795,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.p0deje.Clipbook;
-				PRODUCT_MODULE_NAME = Maccy;
+				PRODUCT_MODULE_NAME = Clipbook;
 				PRODUCT_NAME = Clipbook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1805,7 +1805,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA0EE7BF204657840025FC60 /* Build configuration list for PBXNativeTarget "MaccyUITests" */ = {
+		DA0EE7BF204657840025FC60 /* Build configuration list for PBXNativeTarget "ClipbookUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA0EE7BD204657840025FC60 /* Debug */,
@@ -1814,7 +1814,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DA360DB71E3DF137005C6F6B /* Build configuration list for PBXNativeTarget "MaccyTests" */ = {
+		DA360DB71E3DF137005C6F6B /* Build configuration list for PBXNativeTarget "ClipbookTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA360DB81E3DF137005C6F6B /* Debug */,
@@ -1823,7 +1823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DAEE383E1E3DBEB100DD2966 /* Build configuration list for PBXProject "Maccy" */ = {
+		DAEE383E1E3DBEB100DD2966 /* Build configuration list for PBXProject "Clipbook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAEE384E1E3DBEB100DD2966 /* Debug */,
@@ -1832,7 +1832,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DAEE38501E3DBEB100DD2966 /* Build configuration list for PBXNativeTarget "Maccy" */ = {
+		DAEE38501E3DBEB100DD2966 /* Build configuration list for PBXNativeTarget "Clipbook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAEE38511E3DBEB100DD2966 /* Debug */,

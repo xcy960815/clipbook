@@ -17,7 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAEE38421E3DBEB100DD2966"
                BuildableName = "Clipbook.app"
-               BlueprintName = "Maccy"
+               BlueprintName = "Clipbook"
                ReferencedContainer = "container:Clipbook.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,8 +40,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA360DAF1E3DF137005C6F6B"
-               BuildableName = "MaccyTests.xctest"
-               BlueprintName = "MaccyTests"
+               BuildableName = "ClipbookTests.xctest"
+               BlueprintName = "ClipbookTests"
                ReferencedContainer = "container:Clipbook.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -50,8 +50,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA0EE7B5204657830025FC60"
-               BuildableName = "MaccyUITests.xctest"
-               BlueprintName = "MaccyUITests"
+               BuildableName = "ClipbookUITests.xctest"
+               BlueprintName = "ClipbookUITests"
                ReferencedContainer = "container:Clipbook.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -73,7 +73,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAEE38421E3DBEB100DD2966"
             BuildableName = "Clipbook.app"
-            BlueprintName = "Maccy"
+            BlueprintName = "Clipbook"
             ReferencedContainer = "container:Clipbook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,7 +90,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAEE38421E3DBEB100DD2966"
             BuildableName = "Clipbook.app"
-            BlueprintName = "Maccy"
+            BlueprintName = "Clipbook"
             ReferencedContainer = "container:Clipbook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

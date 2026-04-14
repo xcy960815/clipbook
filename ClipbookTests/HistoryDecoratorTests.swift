@@ -1,6 +1,6 @@
 import XCTest
 import Defaults
-@testable import Maccy
+@testable import Clipbook
 
 @MainActor
 class HistoryItemDecoratorTests: XCTestCase {

@@ -152,7 +152,7 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
       item.numberOfCopies += existingHistoryItem.numberOfCopies
       item.pin = existingHistoryItem.pin
       item.title = existingHistoryItem.title
-      if !item.fromMaccy {
+      if !item.fromClipbook {
         item.application = existingHistoryItem.application
       }
       logger.info("Removing duplicate item '\(item.title)'")

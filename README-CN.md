@@ -1,10 +1,8 @@
-<img width="128px" src="https://maccy.app/img/maccy/Logo.png" alt="Logo" />
-
-# [Clipbook](https://maccy.app)
+# [Clipbook](https://github.com/xcy960815/Clipbook)
 
 [English](README.md) | [简体中文](README-CN.md)
 
-[![Downloads](https://img.shields.io/github/downloads/xcy960815/maccy/total.svg)](https://github.com/xcy960815/maccy/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/xcy960815/Clipbook/total.svg)](https://github.com/xcy960815/Clipbook/releases/latest)
 [![Build Status](https://img.shields.io/bitrise/716921b669780314/master?token=3pMiCb5dpFzlO-7jTYtO3Q)](https://app.bitrise.io/app/716921b669780314)
 
 Clipbook 是一款轻量级的 macOS 剪贴板管理器。它会保存你的复制历史，方便你快速浏览、搜索并再次使用之前复制过的内容。
@@ -23,12 +21,11 @@ Clipbook 需要 macOS Sonoma 14 或更高版本。
   * [加快剪贴板检查间隔](#加快剪贴板检查间隔)
 * [常见问题](#常见问题)
   * [为什么我选择历史项后没有自动粘贴？](#为什么我选择历史项后没有自动粘贴)
-  * [给 Clipbook 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？](#给-maccy-设置打开快捷键时系统提示该快捷键已被占用怎么办)
+  * [给 Clipbook 设置打开快捷键时，系统提示该快捷键已被占用，怎么办？](#给-clipbook-设置打开快捷键时系统提示该快捷键已被占用怎么办)
   * [如何恢复被隐藏的底部栏？](#如何恢复被隐藏的底部栏)
   * [如何忽略 Universal Clipboard 的内容？](#如何忽略-universal-clipboard-的内容)
   * [我的快捷键在密码输入框里失效了，怎么办？](#我的快捷键在密码输入框里失效了怎么办)
-* [翻译](#翻译)
-* [为什么要做 Clipbook](#为什么要做-maccy)
+* [为什么要做 Clipbook](#为什么要做-clipbook)
 * [许可证](#许可证)
 
 <!-- vim-markdown-toc -->
@@ -48,12 +45,7 @@ Clipbook 需要 macOS Sonoma 14 或更高版本。
 
 ## 安装
 
-* 从 [Releases](https://github.com/xcy960815/maccy/releases/latest) 页面下载最新版本。
-* 或通过 [Homebrew](https://brew.sh/) 安装：
-
-```sh
-brew install maccy
-```
+* 从 [Releases](https://github.com/xcy960815/Clipbook/releases/latest) 页面下载最新版本。
 
 ## 使用方法
 
@@ -103,7 +95,7 @@ defaults write org.p0deje.Clipbook ignoreEvents true # 默认值为 false
 
 你也可以通过设置添加更多自定义类型。
 如果想查看某个应用使用了哪些自定义复制类型，可以使用免费的 [Pasteboard-Viewer](https://github.com/sindresorhus/Pasteboard-Viewer)。
-下载安装后，打开应用，复制目标应用中的内容，再查看左侧栏里出现的自定义类型即可。你也可以到当前仓库的 [Issues](https://github.com/xcy960815/maccy/issues) 中查看相关讨论。
+下载安装后，打开应用，复制目标应用中的内容，再查看左侧栏里出现的自定义类型即可。你也可以到当前仓库的 [Issues](https://github.com/xcy960815/Clipbook/issues) 中查看相关讨论。
 
 ### 加快剪贴板检查间隔
 
@@ -148,13 +140,6 @@ defaults write org.p0deje.Clipbook showFooter 1
 ### 我的快捷键在密码输入框里失效了，怎么办？
 
 如果你的快捷键会直接输入字符（例如 `Option+C` 会输入 “ç”），macOS 的安全机制可能会在密码输入框中阻止它。可以使用 [Karabiner-Elements](https://karabiner-elements.pqrs.org/) 将该快捷键映射成例如 `Cmd+Shift+C` 这样的组合。详细说明可参考：[docs/keyboard-shortcut-password-fields.md](docs/keyboard-shortcut-password-fields.md)
-
-## 翻译
-
-翻译托管在 [Weblate](https://hosted.weblate.org/engage/maccy/) 上。
-你可以在这里提交翻译修改建议，或者为 Clipbook 增加新的语言支持。
-
-[![Translation status](https://hosted.weblate.org/widget/maccy/multi-auto.svg)](https://hosted.weblate.org/engage/maccy/)
 
 ## 为什么要做 Clipbook
 
