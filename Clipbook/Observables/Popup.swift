@@ -82,7 +82,8 @@ class Popup {
   }
 
   private var hasDoubleClickAccess: Bool {
-    Accessibility.hasAccess(accessibility: true, listenEvent: true)
+    Accessibility.hasAccess(listenEvent: true) ||
+      Accessibility.hasAccess(accessibility: true)
   }
 
   private var openTriggerConfiguration: PopupOpenTriggerConfiguration {
@@ -162,9 +163,15 @@ class Popup {
     }
 
     guard !doubleClickGlobalMonitor.isRunning else { return }
-    guard Accessibility.check(accessibility: true, listenEvent: true) else { return }
 
-    doubleClickGlobalMonitor.start()
+    let canUseEventTap = Accessibility.hasAccess(listenEvent: true)
+    let canUseFallbackMonitor = Accessibility.hasAccess(accessibility: true)
+    guard canUseEventTap || canUseFallbackMonitor else { return }
+
+    doubleClickGlobalMonitor.start(
+      preferEventTap: canUseEventTap,
+      allowFallbackMonitor: canUseFallbackMonitor
+    )
   }
 
   func deinitDoubleClickMonitors() {
@@ -410,12 +417,14 @@ private final class DoubleClickGlobalMonitor {
   private var runLoopSource: CFRunLoopSource?
   private var fallbackMonitor: Any?
 
-  func start() {
+  func start(preferEventTap: Bool = true, allowFallbackMonitor: Bool = true) {
     guard !isRunning else { return }
 
-    if startEventTap() {
+    if preferEventTap && startEventTap() {
       return
     }
+
+    guard allowFallbackMonitor else { return }
 
     fallbackMonitor = NSEvent.addGlobalMonitorForEvents(
       matching: [.flagsChanged, .keyDown]

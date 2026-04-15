@@ -51,6 +51,27 @@ struct GeneralSettingsPane: View {
     value: "Cancel",
     comment: "Cancel button title for resetting settings"
   )
+  private let inputMonitoringTitle = NSLocalizedString(
+    "InputMonitoringRequired",
+    tableName: "GeneralSettings",
+    bundle: .main,
+    value: "Input Monitoring Required",
+    comment: "Alert title when Input Monitoring permission is needed for double-click modifier key"
+  )
+  private let inputMonitoringMessage = NSLocalizedString(
+    "InputMonitoringMessage",
+    tableName: "GeneralSettings",
+    bundle: .main,
+    value: "Double-click modifier key needs Input Monitoring or Accessibility permission to detect modifier key presses globally. Please enable either permission for Clipbook in System Settings → Privacy & Security.",
+    comment: "Alert message explaining the permission requirement for double-click modifier key"
+  )
+  private let openSystemSettingsLabel = NSLocalizedString(
+    "OpenSystemSettings",
+    tableName: "GeneralSettings",
+    bundle: .main,
+    value: "Open System Settings",
+    comment: "Button label to open System Settings to the Input Monitoring pane"
+  )
 
   @Default(.doubleClickPopupEnabled) private var doubleClickPopupEnabled
   @Default(.doubleClickModifierKey) private var doubleClickModifierKey
@@ -62,6 +83,7 @@ struct GeneralSettingsPane: View {
 
   @State private var doubleClickRecorder = DoubleClickModifierRecorder()
   @State private var showResetSettingsConfirmation = false
+  @State private var showInputMonitoringAlert = false
   @State private var updater = SoftwareUpdater()
 
   var body: some View {
@@ -210,6 +232,16 @@ struct GeneralSettingsPane: View {
       }
       Button(resetSettingsCancel, role: .cancel) {}
     }
+    .alert(inputMonitoringTitle, isPresented: $showInputMonitoringAlert) {
+      Button(openSystemSettingsLabel) {
+        if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent") {
+          NSWorkspace.shared.open(url)
+        }
+      }
+      Button(resetSettingsCancel, role: .cancel) {}
+    } message: {
+      Text(inputMonitoringMessage)
+    }
   }
 
   private func refreshModifiers(_ sender: Sendable) {
@@ -220,7 +252,10 @@ struct GeneralSettingsPane: View {
 
   private func updateDoubleClickMode(_ isEnabled: Bool) {
     if isEnabled {
-      Accessibility.check(accessibility: true, listenEvent: true)
+      if !Accessibility.hasAccess(listenEvent: true) &&
+         !Accessibility.hasAccess(accessibility: true) {
+        showInputMonitoringAlert = true
+      }
       doubleClickModifierKey = .none
     }
 
